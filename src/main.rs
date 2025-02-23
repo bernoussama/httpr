@@ -4,6 +4,7 @@ use std::{fs, thread};
 
 use faras::request::Request;
 use faras::response::Response;
+
 use flate2::read::GzDecoder;
 use flate2::write::GzEncoder;
 use flate2::Compression;
@@ -33,13 +34,14 @@ fn handle_connection(mut stream: &TcpStream) {
     let mut response = Response::new();
     let path = request.request_line.target;
     let method = request.request_line.method;
+
     let binding = vec![String::from("")].clone();
     let client_encodings = request.headers.get("Accept-Encoding").unwrap_or(&binding);
     let client_encodings = client_encodings
         .iter()
         .filter(|encoding| supported_encodings.contains(&encoding.as_str()))
         .collect::<Vec<_>>();
-    println!("client_encodings: {:#?}", client_encodings);
+
     if method == "GET" {
         if path == "/" {
             response.body = b"Hello, World!".to_vec();
