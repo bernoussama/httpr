@@ -1,0 +1,19 @@
+# POST request with body
+POST http://localhost:7887
+
+{
+    "key": "value",
+    "key2": "value"
+}
+
+### respond with hello world
+GET http://localhost:7887/
+
+### respond with body
+GET http://localhost:7887/echo/abc
+
+### respond with User-Agent
+GET http://localhost:7887/user-agent
+
+### get file
+GET http://localhost:7887/files/foo
