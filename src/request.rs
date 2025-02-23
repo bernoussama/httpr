@@ -47,13 +47,14 @@ impl Request {
             if line.is_empty() {
                 break;
             }
-            let header: Vec<&str> = line.split(":").map(|part| part.trim()).collect();
+            let header = line.split_once(":").unwrap();
+            let (header, values) = (header.0.trim(), header.1.trim());
             request
                 .headers
-                .entry(header[0].to_string())
+                .entry(header.to_string())
                 // .and_modify(|values| values.push(header[1].to_string()))
                 .or_insert(
-                    header[1]
+                    values
                         .split(",")
                         .map(|value| value.trim().to_string())
                         .collect(),
