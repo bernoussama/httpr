@@ -25,6 +25,7 @@ fn main() {
         }
     }
 }
+
 fn handle_connection(mut stream: &TcpStream) {
     let supported_encodings = ["gzip"];
     let request = Request::new(stream).unwrap();
