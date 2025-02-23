@@ -72,7 +72,7 @@ impl Request {
             }
         }
 
-        println!("request: {:#?}", String::from_utf8(request.body.clone())?);
+        // println!("request: {:#?}", String::from_utf8(request.body.clone())?);
         Ok(request)
     }
 }
