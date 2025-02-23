@@ -1,0 +1,16 @@
+[package]
+name = "faras"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "faras"
+path = "src/lib.rs"
+
+[[bin]]
+name = "faras"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1.0.96"
+flate2 = "1.0.35"
