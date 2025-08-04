@@ -1,8 +1,8 @@
-# Faras
+# HTTPR
 
 ## Description
-this is Faras e a multithreaded HTTP server from scratch in rust
-## "Why?" (Motivation/Goal/Problem to solve)
+this is an experimental multithreaded HTTP server from scratch in rust
+
 
 ## 🚀 Quick Start
 ```shell
@@ -18,4 +18,3 @@ cargo run
   1. Fork it
   2. Create your feature branch (git checkout -b my-new-feature)
   3. Create a PR
-
