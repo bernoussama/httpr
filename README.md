@@ -6,8 +6,8 @@ this is an experimental multithreaded HTTP server from scratch in rust
 
 ## 🚀 Quick Start
 ```shell
-git clone https://github.com/bernoussama/faras
-cd faras
+git clone https://github.com/bernoussama/httpr
+cd httpr
 cargo run
 ```
 ## Usage
